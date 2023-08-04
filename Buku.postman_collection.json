@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "c4450f91-2c44-471b-b379-565fea48d4ff",
+		"name": "Buku",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23429672"
+	},
+	"item": [
+		{
+			"name": "Simpan Buku",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"judul\": \"APAAJA\",\r\n    \"pengarang\": \"TEST\",\r\n    \"penerbit\": \"AAA\",\r\n    \"tanggalTerbit\": \"03 July 2023\",\r\n    \"tebalBuku\": \"200 halaman\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/buku-service/simpan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"buku-service",
+						"simpan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Buku",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pageNo\" : 1,\r\n    \"pageSize\" : 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/buku-service/get/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"buku-service",
+						"get",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Buku By Status",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pageNo\" : 1,\r\n    \"pageSize\" : 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/buku-service/get/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"buku-service",
+						"get",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Data Buku",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idBuku\": \"A0001\",\r\n    \"judul\": \"judul\",\r\n    \"pengarang\": \"pengarang\",\r\n    \"penerbit\": \"penerbit\",\r\n    \"tanggalTerbit\": \"29 June 1997\",\r\n    \"tebalBuku\": \"500 halaman\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/buku-service/update-data",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"buku-service",
+						"update-data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Status Buku",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idBuku\": \"A0003\",\r\n    \"peminjam\": \"Dody\",\r\n    \"tanggalPinjam\": \"04 Aug 2023\",\r\n    \"tanggalKembali\": \"20 Aug 2023\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/buku-service/update-status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"buku-service",
+						"update-status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Buku",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idBuku\" : \"A0007\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/buku-service/delete/by-id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"buku-service",
+						"delete",
+						"by-id"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
